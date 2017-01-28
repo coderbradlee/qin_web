@@ -1,0 +1,29 @@
+﻿@import url("css.css");
+
+
+.ititle{ background:url(../images/itibg.jpg) repeat-x; height:33px;}
+.inews{ width:354px;}
+.inewsti{ width:218px; float:left; height:33px; overflow:hidden; background:url(../images/inews.png) no-repeat;}
+.inewsti li{ width:105px; float:left; height:100%; margin-right:4px;}
+.inewsti li a{ display:block; width:100%; height:100%; text-indent:-9999em;}
+.inewstiov{background:url(../images/inews_.png) no-repeat;}
+.imore{ width:74px; height:33px; background:url(../images/imore.png) no-repeat;}
+
+.inewsmain{ height:175px; width:354px; overflow:hidden; position:relative; background:url(../images/imline.png) no-repeat right 0;}
+.inewsmain ul{ position:absolute; left:17px; width:300px; height:160px; padding-top:15px; }
+.inewsmain ul.anewsm{ top:0;}
+.inewsmain ul.bnewsm{ top:180px;}
+.inewsmain ul.dnewsm{ top:360px;}
+.inewsmain ul li{ width:100%; height:23px; line-height:23px; background:url(../images/dot1.png) no-repeat 2px center}
+.inewsmain ul li a{ display:block; float:left; text-indent:12px;}
+.inewsmain ul li span{ display:block; float:right; width:60px; color:#888888}
+
+
+.mline{background:url(../images/imline.png) no-repeat right 0;}
+.iabout{ width:360px;}
+.iaboutti{ width:100%; height:33px;}
+.iaboutti h1{ float:left; height:33px; background:url(../images/iabout.png) no-repeat 22px 0; width:110px; text-indent:-9999em;}
+.iaboutmain{ width:305px; margin:0 auto; padding-top:15px; }
+
+.ishehui{ width:225px;}
+.ishehuiti{ width:100%; height:33px; background:url(../images/ishzr.png) no-repeat 20px 0;}

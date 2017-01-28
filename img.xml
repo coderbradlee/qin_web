@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<data>
+<channel>
+<item>
+<image>images/banner.jpg</image>
+</item>
+<item>
+<image>images/banner2.jpg</image>
+</item>
+<item>
+<image>images/banner3.jpg</image>
+</item>
+<item>
+<image>images/banner4.jpg</image>
+</item>
+
+</channel>
+<config>
+<autoPlayTime>5</autoPlayTime>
+<btnSetMargin>10 10 auto auto</btnSetMargin>
+<scaleMode>exactFil</scaleMode>
+<changImageMode>click</changImageMode>
+<isShowBtn>false</isShowBtn>
+<transform>breathe</transform>
+<titleBgAlpha>0.75</titleBgAlpha>
+<isShowTitle>false</isShowTitle>
+<isShowAbout>false</isShowAbout>
+</config>
+</data>
