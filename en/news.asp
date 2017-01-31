@@ -36,7 +36,7 @@
 					
 	                if aid<>"" then aid=int(aid)
 					set res=server.createobject("adodb.recordset")
-					sql="select * from jiedai_newsclass where e_classname<>'' order by flag asc"
+					sql="select * from zhibenhui_newsclass where e_classname<>'' order by flag asc"
 					res.open sql,conn,1,1	
 					do while not res.eof
 
@@ -70,7 +70,7 @@
   
     	  <%
 					set res=server.createobject("adodb.recordset")
-					sql="select * from jiedai_newsclass where e_classname<>'' order by flag asc"
+					sql="select * from zhibenhui_newsclass where e_classname<>'' order by flag asc"
 					res.open sql,conn,1,1	
 					do while not res.eof
 
@@ -87,7 +87,7 @@
      
   <%
 					set rs=server.createobject("adodb.recordset")
-					sql="select top 6 * from jiedai_news  where e_title<>'' and classid="&res("id")&" order by id desc"
+					sql="select top 6 * from zhibenhui_news  where e_title<>'' and classid="&res("id")&" order by id desc"
 					rs.open sql,conn,1,1	
 					do while not rs.eof
 

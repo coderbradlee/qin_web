@@ -75,6 +75,54 @@
               <div></div>
             
             </ul></li>
+            <li><a href="platform.asp" class="ap<% if  mf="platform"  then response.Write"2"%>" >并购公众平台</a><ul>
+            
+            
+                          <%
+					
+	              
+					set res=server.createobject("adodb.recordset")
+					sql="select * from jiedai_qita where id=12 or id= 13 or id=14 or id= 15 or id=16 order by flag asc"
+					res.open sql,conn,1,1	
+					do while not res.eof
+					%> 
+
+  <li><a href="platform.asp?a=<%=res("id")%>"  ><%=res("classid")%></a></li>
+    
+    
+        
+          <%
+					  res.movenext
+					  loop
+					  res.close
+					  set res=nothing
+					  %>
+             <div></div>
+            </ul></li>
+             <li><a href="forum.asp" class="ap<% if  mf="forum"  then response.Write"2"%>" >并购交易社区</a><ul>
+            
+            
+                          <%
+					
+	              
+					set res=server.createobject("adodb.recordset")
+					sql="select * from jiedai_qita where id=17 or id= 18 or id=19 or id= 20 order by flag asc"
+					res.open sql,conn,1,1	
+					do while not res.eof
+					%> 
+
+  <li><a href="forum.asp?a=<%=res("id")%>"  ><%=res("classid")%></a></li>
+    
+    
+        
+          <%
+					  res.movenext
+					  loop
+					  res.close
+					  set res=nothing
+					  %>
+             <div></div>
+            </ul></li>
             <li><a href="case.asp" class="ap<% if  mf="case"  then response.Write"2"%>" >智本汇商学院</a><ul>
             
               <%
@@ -94,19 +142,19 @@
 					  %>
               <div></div>
             </ul></li>
-            <li><a href="wenhua.asp" class="ap<% if  mf="wenhua"  then response.Write"2"%>" >企业文化</a><ul>
+            <li><a href="partner.asp" class="ap<% if  mf="partner"  then response.Write"2"%>" >全球合伙人</a><ul>
             
             
                           <%
 					
 	              
 					set res=server.createobject("adodb.recordset")
-					sql="select * from jiedai_qita where id=7 or id= 8 order by flag asc"
+					sql="select * from jiedai_qita where id=9 or id= 10 or id= 11 order by flag asc"
 					res.open sql,conn,1,1	
 					do while not res.eof
 					%> 
 
-  <li><a href="wenhua.asp?a=<%=res("id")%>"  ><%=res("classid")%></a></li>
+  <li><a href="partner.asp?a=<%=res("id")%>"  ><%=res("classid")%></a></li>
     
     
         
@@ -116,7 +164,6 @@
 					  res.close
 					  set res=nothing
 					  %>
-	<li><A href="wenhua_list.asp" >文化生活</A></li>
              <div></div>
             </ul></li>
             <li><a href="contact.asp" class="ap<% if  mf="contact"  then response.Write"2"%>" >联系我们</a></li>

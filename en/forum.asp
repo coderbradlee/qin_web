@@ -1,46 +1,33 @@
 <!--#include file="conn.asp" -->
-<%
 
-		
-Jid=checkStr(request.QueryString("id"))
-if not isnumeric(jid) then
-response.write"参数有误"
-response.end
-end if
-
-
-set ra=server.createobject("adodb.recordset")
-sql="select * from zhibenhui_news where id="&jid
-ra.open sql,conn,1,3
-ra("click")=ra("click")+1
-N=ra("classid")
-ra.update
-
-	set rh=server.CreateObject("adodb.recordset")
-		if N<>"" then
-		seh="select * from zhibenhui_newsclass where id="&N&""
-		else
-		seh="select * from zhibenhui_newsclass where e_classname<>'' order by id asc"
-		end if
-		rh.open seh,conn,1,1	
-		a_title=rh("e_classname")
-		aid=rh("id")
-		N=aid
-			bimg=rh("e_images")
-		rh.close:set rh=nothing
-		
-		
-
-		
-		
-		%>	
-
+<% 	set ris=server.createobject("adodb.recordset")
+	if request.QueryString("a")="" then
+	sqli="select * from jiedai_qita where id=17"
+	else
+    sqli="select * from jiedai_qita where id="&request.QueryString("a")
+	end if
+	 ris.open sqli,conn,1,1
+									  
+	a_title=ris("e_classid")
+	a_body=ris("e_body")
+	aid=ris("id")
+	bimg=ris("e_tupian")
+		  
+	 ris.close
+	 set ris=nothing
+	  if a_body="" then a_body="资料整理更新中···"
+									  
+	 a_body=LoseStyleTag(a_body) '过滤STYLE	
+	 
+	 mf="forum"						  
+									  
+%>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
-<TITLE><%=ra("e_title")%>_<%=a_title%>_<%=title%></TITLE>
+<TITLE><%=a_title%>_<%=title%></TITLE>
 <meta name="keywords" content="<%=keywords_content%>" />
 <meta name="description" content="<%=description_content%>" />
 <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
@@ -62,27 +49,33 @@ ra.update
     	<ul class="left_list">
         	
             
-                    	  <%
+                          <%
 					
-	                if aid<>"" then aid=int(aid)
+	              
 					set res=server.createobject("adodb.recordset")
-					sql="select * from zhibenhui_newsclass where e_classname<>'' order by flag asc"
-					res.open sql,conn,1,1	
+					sql="select * from jiedai_qita where id=17 or id= 18 or id=19 or id= 20 order by flag asc"
+					res.open sql,conn,1,1
+					if aid<>"" then
+					i=1
+					else
+					i=0 
+					end if					
 					do while not res.eof
-
 					%> 
 
- <li><a href="news_list.asp?a=<%=res("id")%>" <%if aid=int(res("id"))  then  response.Write"class=""focus""" end if%> ><%=res("e_classname")%></a></li>
+  <li><a href="forum.asp?a=<%=res("id")%>" <%if aid=int(res("id")) or i=0 then  response.Write"class=""focus""" end if%> ><%=res("e_classid")%></a></li>
     
     
         
-<%
+          <%
 					  res.movenext
+					  i=i+1
 					  loop
 					  res.close
 					  set res=nothing
 					  %>
-         
+	<li><A href="forum_list.asp" >more...</A></li>
+            
             
             
         </ul>
@@ -92,16 +85,11 @@ ra.update
  
  <!-- .ncenter -->
  <div class="ncenter">
-	<ul class="nc_title">Home > News  <span> > <% =a_title %></span></ul>
+	<ul class="nc_title">Home > Forum  <span> > <% =a_title %></span></ul>
    	<%call banner2(bimg)%>
     <ul class="nbody">
-  		
-							<p style="font-weight:bold; text-align:center"><%=ra("e_title")%></p>
-                            <p><%=ra("e_content")%></p>
-                   
-                            
-                            
-
+    
+ <% =a_body %>
 
     
     </ul>
@@ -112,7 +100,7 @@ ra.update
     <div class="nright">
     	
         
-        <!--#include file="cright.asp" -->
+        <!--#include file="right.asp" -->
 
         
     </div>

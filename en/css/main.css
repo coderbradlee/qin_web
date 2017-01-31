@@ -14,18 +14,8 @@ body{ background:#FFF url(../images/nibg.gif) repeat-x; color:#606060; line-heig
 .nc_title{ width:100%; height:25px; border-bottom:1px solid #e5e5e5; text-indent:3px;}
 .nc_title span{ color:#9e9e9e}
 .nbanner{ width:100%;}
-.nbody{
-	width:98%;
-	margin:0 auto;
-	padding-top:20px;
-	padding-bottom:35px;
-	line-height: 20px;
-}
-.nright{
-	width:215px;
-	float:right;
-	line-height: 20px;
-}
+.nbody{	width:98%; margin:0 auto; padding-top:20px; padding-bottom:35px;}
+.nright{ width:215px; float:right;}
 .right_list{ width:100%; background:#ececec; padding-bottom:5px;}
 .right_list h1{ width:100%; color:#1a4285; font-weight:bold; height:30px; line-height:30px; text-indent:20px;}
 .right_list ul{ width:203px; background:#FFF; border:1px solid #e2e2e2; padding-top:10px; padding-bottom:12px; margin:0 auto}

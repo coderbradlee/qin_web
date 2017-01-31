@@ -25,8 +25,9 @@
 	
     <div class="inews fl">
     	<ul class="inewsti fl">
-        	<li><a href="news_list.asp?a=37" >Company News</a></li>
-            <li><a href="news_list.asp?a=25" >Media Attention</a></li>
+        	<li><a href="news_list.asp?a=37" >news</a></li>
+            <li><a href="news_list.asp?a=25" >reprot</a></li>
+            <li><a href="news_list.asp?a=38" >merge dynamic</a></li>
         </ul>
         <ul class="imore fr"><a href="news.asp" class="a100" >More</a></ul>
     </div>
@@ -51,7 +52,7 @@
     	<ul class="anewsm">
         	  <%
 					set rs=server.createobject("adodb.recordset")
-					sql="select top 6 * from jiedai_news  where e_title<>'' and classid=37 order by id desc"
+					sql="select top 6 * from zhibenhui_news  where e_title<>'' and classid=37 order by id desc"
 					rs.open sql,conn,1,1	
 					do while not rs.eof
 
@@ -70,7 +71,7 @@ set rs=nothing
         	<ul class="bnewsm">
         <%
 					set rs=server.createobject("adodb.recordset")
-					sql="select top 6 * from jiedai_news  where  e_title<>'' and classid=25 order by id desc"
+					sql="select top 6 * from zhibenhui_news  where  e_title<>'' and classid=25 order by id desc"
 					rs.open sql,conn,1,1	
 					do while not rs.eof
 

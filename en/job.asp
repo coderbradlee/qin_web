@@ -66,7 +66,7 @@
    <%call banner(205)%>
     <ul class="nbody">
     
-	  <p>    At Haide Capital, you can find an innovative team full of vitality, ideals and passion. Besides the satisfactory remuneration and benefits, what will make you love to work here are opportunities for designing your career path, a stage for fair competition, a friendly climate, co-operative and trustworthy team fellows... It is at Haide Capital that you feel like coming back home enjoying the interesting and challenging cause with sisters and brothers. Do come and join us.</p>
+	  <p>    job opportunity and join us.</p>
 	  <p>&nbsp;</p>
 	  <script>
 $(document).ready(function(){

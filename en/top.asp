@@ -18,7 +18,7 @@
     </div>
     
     <div class="nav_logo">
-   	  <h1 class="logo"><a href="index.asp" class="a100" >Haide Capital</a></h1>
+   	  <h1 class="logo"><a href="index.asp" class="a100" >Capital</a></h1>
         <div class="menus">
         
         	<li class="home"><a href="index.asp" class="ap<% if mf="" or mf="index"  then response.Write"2"%>" >Home</a></li>
@@ -55,7 +55,7 @@
                        	  <%
 		
 					set res=server.createobject("adodb.recordset")
-					sql="select * from jiedai_newsclass where e_classname<>'' order by flag asc"
+					sql="select * from zhibenhui_newsclass where e_classname<>'' order by flag asc"
 					res.open sql,conn,1,1	
 					do while not res.eof
 
@@ -74,6 +74,52 @@
          
               <div></div>
             
+            </ul></li>
+            <li style="width:117px; margin-left:25px;"><a href="platform.asp" class="ap<% if  mf="platform"  then response.Write"2"%>" >platform</a><ul style="margin-left:-10px;">
+            
+            
+                          <%
+					
+	              
+					set res=server.createobject("adodb.recordset")
+					sql="select * from jiedai_qita where id=12 or id= 13 or id=14 or id= 15 or id=16 order by flag asc"
+					res.open sql,conn,1,1	
+					do while not res.eof
+					%> 
+
+  <li><a href="platform.asp?a=<%=res("id")%>"  ><%=res("e_classid")%></a></li>
+    
+    
+        
+          <%
+					  res.movenext
+					  loop
+					  res.close
+					  set res=nothing
+					  %>
+            </ul></li>
+            <li style="width:117px; margin-left:25px;"><a href="forum.asp" class="ap<% if  mf="forum"  then response.Write"2"%>" >forum</a><ul style="margin-left:-10px;">
+            
+            
+                          <%
+					
+	              
+					set res=server.createobject("adodb.recordset")
+					sql="select * from jiedai_qita where id=17 or id= 18 or id=19 or id= 20 order by flag asc"
+					res.open sql,conn,1,1	
+					do while not res.eof
+					%> 
+
+  <li><a href="forum.asp?a=<%=res("id")%>"  ><%=res("e_classid")%></a></li>
+    
+    
+        
+          <%
+					  res.movenext
+					  loop
+					  res.close
+					  set res=nothing
+					  %>
             </ul></li>
             <li style="margin-left:9px;"><a href="case.asp" class="ap<% if  mf="case"  then response.Write"2"%>" >Portfolio</a><ul>
             
@@ -94,19 +140,19 @@
 					  %>
               <div></div>
             </ul></li>
-            <li style="width:117px; margin-left:25px;"><a href="wenhua.asp" class="ap<% if  mf="wenhua"  then response.Write"2"%>" >Corporate Culture</a><ul style="margin-left:-10px;">
+            <li style="width:117px; margin-left:25px;"><a href="partner.asp" class="ap<% if  mf="partner"  then response.Write"2"%>" >partner</a><ul style="margin-left:-10px;">
             
             
                           <%
 					
 	              
 					set res=server.createobject("adodb.recordset")
-					sql="select * from jiedai_qita where id=7 or id= 8 order by flag asc"
+					sql="select * from jiedai_qita where id=9 or id= 10 or id= 11 order by flag asc"
 					res.open sql,conn,1,1	
 					do while not res.eof
 					%> 
 
-  <li><a href="wenhua.asp?a=<%=res("id")%>"  ><%=res("e_classid")%></a></li>
+  <li><a href="partner.asp?a=<%=res("id")%>"  ><%=res("e_classid")%></a></li>
     
     
         
@@ -116,7 +162,6 @@
 					  res.close
 					  set res=nothing
 					  %>
-	<li><A href="wenhua_list.asp" >Cultural Activities</A></li>
              <div></div>
             </ul></li>
             <li style="margin-left:35px;"><a href="contact.asp" class="ap<% if  mf="contact"  then response.Write"2"%>" >Contact Us</a></li>

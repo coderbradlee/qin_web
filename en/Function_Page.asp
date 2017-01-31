@@ -329,10 +329,10 @@ End Function
 ' 设置 Terminate 事件。
 '
 '====================================================================
-Private Sub Class_Terminate  
- XD_RS.close
- Set XD_RS=nothing
-End Sub
+'Private Sub Class_Terminate  
+ 'XD_RS.close
+ 'Set XD_RS=nothing
+'End Sub
 '====================================================================
 'ShowError  错误提示
 '

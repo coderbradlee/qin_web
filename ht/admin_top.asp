@@ -20,7 +20,7 @@ href="images/style.css" type=text/css rel=stylesheet>
       target=_parent><IMG title=点击这里修复登录错误 src="images/admin-ico.gif" 
       align=absMiddle border=0></A> 欢迎您 <B><FONT class=enfont2 
       color=#ff4800><%=session("admin")%></FONT></B> 登录到 <FONT 
-      class=enfont>Greatmo.CMS&nbsp;&nbsp;ver8.0</FONT> 后台协作平台！| <FONT 
+      class=enfont>ruomingzi.com&nbsp;&nbsp;ver1.0</FONT> 后台协作平台！| <FONT 
       class=enfont2>
       
       

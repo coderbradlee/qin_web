@@ -1,36 +1,13 @@
 <!--#include file="conn.asp" -->
 <!--#include file="Function_Page.asp" -->
-<%
-		N=request.QueryString("a")
-		set rh=server.CreateObject("adodb.recordset")
-		if n<>"" then
-		seh="select * from zhibenhui_newsclass where id="&N&""
-		else
-		seh="select * from zhibenhui_newsclass where e_classname<>'' order by id asc"
-		end if
-		rh.open seh,conn,1,1
-		if not rh.eof then
-		N=rh("id")
-		a_title=rh("e_classname")
-		aid=rh("id")
-			bimg=rh("e_images")
-		end if
-		rh.close:set rh=nothing
-		if a_title="" then a_title="News"
-		
-		
-		
-		keys=Trim(Request.Form("keyword"))
-		
-		if keys<>"" then
-		a_title="Search"
-		aid=999999999999
-		end if
-		
-		
-		mf="news"
-		%>	
 
+<%					  
+	a_title="more..."
+
+	 
+	 mf="platform"						  
+									  
+%>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -58,27 +35,27 @@
     	<ul class="left_list">
         	
             
-                    	  <%
+                          <%
 					
-	                if aid<>"" then aid=int(aid)
+	              
 					set res=server.createobject("adodb.recordset")
-					sql="select * from zhibenhui_newsclass where e_classname<>'' order by flag asc"
+					sql="select * from jiedai_qita where id=12 or id= 13 or id=14 or id= 15 or id=16 order by flag asc"
 					res.open sql,conn,1,1	
 					do while not res.eof
-
 					%> 
 
- <li><a href="news_list.asp?a=<%=res("id")%>" <%if aid=int(res("id"))  then  response.Write"class=""focus""" end if%> ><%=res("e_classname")%></a></li>
+  <li><a href="platform.asp?a=<%=res("id")%>"  ><%=res("e_classid")%></a></li>
     
     
         
-<%
+          <%
 					  res.movenext
 					  loop
 					  res.close
 					  set res=nothing
 					  %>
-         
+	<li><A href="platform_list.asp" class="focus" >more....</A></li>
+            
             
             
         </ul>
@@ -88,36 +65,27 @@
  
  <!-- .ncenter -->
  <div class="ncenter">
-	<ul class="nc_title">Home > News  <span> > <% =a_title %></span></ul>
-   	<%call banner2(bimg)%>
+	<ul class="nc_title">Home > Platform  <span> > <% =a_title %></span></ul>
+   	<%call banner(204)%>
     <ul class="nbody">
-  
-  
-    <ul class="news_list" id="newslist" > 
+    
+
+
+<ul class="news_list" id="newslist" > 
      
      
      
       <%
 Set mypage=new xdownpage
 mypage.getconn=conn
-
-if keys<>"" then
-mypage.getsql="select * from zhibenhui_News where  e_title like '%"&keys&"%' order by tuijian desc,id desc"
-else
-mypage.getsql="select * from zhibenhui_News where classid="&N&"  and e_title<>'' order by tuijian desc,id desc"
-end if
-
-
-
+mypage.getsql="select * from platform_fuwu where  classid<>'' order by  flag asc"
 mypage.pagesize=15
 set rs=mypage.getrs()
 for i=1 to mypage.pagesize
-if not rs.eof then
-ntis= rs("e_title")
-ntis=replace(ntis,keys,"<font style='color:red'>"&keys&"</font>")
+if not rs.eof then 
 %>
 			
-		<li><a href="news_show.asp?id=<% =rs("id") %>" ><% =got(rs("e_title"),56) %></a><span>[<% =FormatDate(rs("addtime"),4) %>]</span></li>
+		<li><a href="platform_show.asp?id=<% =rs("id") %>" ><% =rs("e_classid") %></a><span>[<% =FormatDate(rs("addtime"),4) %>]</span></li>
 				
 <%
 rs.movenext
@@ -157,7 +125,7 @@ set rs=nothing
     <div class="nright">
     	
         
-        <!--#include file="cright.asp" -->
+        <!--#include file="right.asp" -->
 
         
     </div>

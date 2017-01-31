@@ -1,46 +1,35 @@
 <!--#include file="conn.asp" -->
-<%
-
-		
-Jid=checkStr(request.QueryString("id"))
-if not isnumeric(jid) then
-response.write"²ÎÊýÓÐÎó"
-response.end
-end if
 
 
-set ra=server.createobject("adodb.recordset")
-sql="select * from zhibenhui_news where id="&jid
-ra.open sql,conn,1,3
-ra("click")=ra("click")+1
-N=ra("classid")
-ra.update
+<% 	
 
-	set rh=server.CreateObject("adodb.recordset")
-		if N<>"" then
-		seh="select * from zhibenhui_newsclass where id="&N&""
-		else
-		seh="select * from zhibenhui_newsclass where e_classname<>'' order by id asc"
-		end if
-		rh.open seh,conn,1,1	
-		a_title=rh("e_classname")
-		aid=rh("id")
-		N=aid
-			bimg=rh("e_images")
-		rh.close:set rh=nothing
-		
-		
 
-		
-		
-		%>	
 
+
+set ris=server.createobject("adodb.recordset")
+    sqli="select * from platform_fuwu where id="&request.QueryString("id")
+	 ris.open sqli,conn,1,1
+	if not ris.eof then								  
+	ai_ti=ris("e_classid")
+	ai_body=ris("e_body")
+	end if
+		  
+	 ris.close
+	 set ris=nothing
+
+				  
+	a_title="platform"
+
+	 
+	 mf="platform"						  
+									  
+%>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
-<TITLE><%=ra("e_title")%>_<%=a_title%>_<%=title%></TITLE>
+<TITLE><%=a_title%>_<%=title%></TITLE>
 <meta name="keywords" content="<%=keywords_content%>" />
 <meta name="description" content="<%=description_content%>" />
 <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
@@ -62,27 +51,27 @@ ra.update
     	<ul class="left_list">
         	
             
-                    	  <%
+                          <%
 					
-	                if aid<>"" then aid=int(aid)
+	              
 					set res=server.createobject("adodb.recordset")
-					sql="select * from zhibenhui_newsclass where e_classname<>'' order by flag asc"
+					sql="select * from jiedai_qita where id=12 or id= 13 or id=14 or id= 15 or id=16 order by flag asc"
 					res.open sql,conn,1,1	
 					do while not res.eof
-
 					%> 
 
- <li><a href="news_list.asp?a=<%=res("id")%>" <%if aid=int(res("id"))  then  response.Write"class=""focus""" end if%> ><%=res("e_classname")%></a></li>
+  <li><a href="platform.asp?a=<%=res("id")%>"  ><%=res("e_classid")%></a></li>
     
     
         
-<%
+          <%
 					  res.movenext
 					  loop
 					  res.close
 					  set res=nothing
 					  %>
-         
+	<li><A href="platform_list.asp" class="focus" >platform</A></li>
+            
             
             
         </ul>
@@ -92,15 +81,15 @@ ra.update
  
  <!-- .ncenter -->
  <div class="ncenter">
-	<ul class="nc_title">Home > News  <span> > <% =a_title %></span></ul>
-   	<%call banner2(bimg)%>
+	<ul class="nc_title">Home > platform  <span> > <% =a_title %></span></ul>
+   	<%call banner(204)%>
     <ul class="nbody">
-  		
-							<p style="font-weight:bold; text-align:center"><%=ra("e_title")%></p>
-                            <p><%=ra("e_content")%></p>
+    
+		<p style="font-weight:bold; text-align:center"><%=ai_ti%></p>
+                            <p><%=ai_body%></p>
                    
                             
-                            
+
 
 
     
@@ -112,7 +101,7 @@ ra.update
     <div class="nright">
     	
         
-        <!--#include file="cright.asp" -->
+        <!--#include file="right.asp" -->
 
         
     </div>

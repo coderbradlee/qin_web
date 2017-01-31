@@ -292,21 +292,109 @@ curObj.style.fontWeight="bold";
 					  
 					  
                       <TR>
-                        <TD><IMG src="images/plus-.gif" align=absMiddle> <A href="zhibenhui_fuwu.asp?action=add" 
+                        <TD><IMG src="images/plus-.gif" align=absMiddle> <A href="jiedai_fuwu.asp?action=add" 
                   target=mainFrame>信息添加 √</A></TD>
                       </TR>
                       <TR>
                         <TD><IMG src="images/plus-.gif" align=absMiddle> <A 
-                  href="zhibenhui_fuwu.asp?action=list" 
+                  href="jiedai_fuwu.asp?action=list" 
                   target=mainFrame>信息管理</A></TD>
                       </TR>
                     </TBODY>
                   </TABLE>
                   
                      
+                   <TABLE 
+            style="BORDER-RIGHT: #ddedf6 1px solid; BORDER-TOP: #ddedf6 1px solid; BORDER-LEFT: #ddedf6 1px solid; BORDER-BOTTOM: #ddedf6 1px solid; BACKGROUND-COLOR: #ffffff" 
+            height=25 cellSpacing=5 cellPadding=0 width="100%" border=0>
+                    <TBODY>
+                      <TR>
+                        <TD><B><IMG src="images/cms-ico1.gif" 
+                  align=absMiddle>&nbsp;&nbsp;&nbsp;</B><FONT 
+                  color=#ff3300><B>全球合伙人</B></FONT></TD>
+                      </TR>
+                    </TBODY>
+                  </TABLE>
+                  <TABLE style="MARGIN-TOP: 10px; MARGIN-BOTTOM: 10px" cellSpacing=0 
+            cellPadding=4 width="100%" border=0>
+                    <TBODY>
+                      
+					  
+		
+					  
+					  
+                      <TR>
+                        <TD><IMG src="images/plus-.gif" align=absMiddle> <A href="partner_fuwu.asp?action=add" 
+                  target=mainFrame>文章添加 √</A></TD>
+                      </TR>
+                      <TR>
+                        <TD><IMG src="images/plus-.gif" align=absMiddle> <A 
+                  href="partner_fuwu.asp?action=list" 
+                  target=mainFrame>文章管理</A></TD>
+                      </TR>
+                    </TBODY>
+                  </TABLE>
                   
-                  
-                  
+                   <TABLE 
+            style="BORDER-RIGHT: #ddedf6 1px solid; BORDER-TOP: #ddedf6 1px solid; BORDER-LEFT: #ddedf6 1px solid; BORDER-BOTTOM: #ddedf6 1px solid; BACKGROUND-COLOR: #ffffff" 
+            height=25 cellSpacing=5 cellPadding=0 width="100%" border=0>
+                    <TBODY>
+                      <TR>
+                        <TD><B><IMG src="images/cms-ico1.gif" 
+                  align=absMiddle>&nbsp;&nbsp;&nbsp;</B><FONT 
+                  color=#ff3300><B>并购公众平台</B></FONT></TD>
+                      </TR>
+                    </TBODY>
+                  </TABLE>
+                  <TABLE style="MARGIN-TOP: 10px; MARGIN-BOTTOM: 10px" cellSpacing=0 
+            cellPadding=4 width="100%" border=0>
+                    <TBODY>
+                      
+					  
+		
+					  
+					  
+                      <TR>
+                        <TD><IMG src="images/plus-.gif" align=absMiddle> <A href="platform_fuwu.asp?action=add" 
+                  target=mainFrame>文章添加 √</A></TD>
+                      </TR>
+                      <TR>
+                        <TD><IMG src="images/plus-.gif" align=absMiddle> <A 
+                  href="platform_fuwu.asp?action=list" 
+                  target=mainFrame>文章管理</A></TD>
+                      </TR>
+                    </TBODY>
+                  </TABLE>
+             <TABLE 
+            style="BORDER-RIGHT: #ddedf6 1px solid; BORDER-TOP: #ddedf6 1px solid; BORDER-LEFT: #ddedf6 1px solid; BORDER-BOTTOM: #ddedf6 1px solid; BACKGROUND-COLOR: #ffffff" 
+            height=25 cellSpacing=5 cellPadding=0 width="100%" border=0>
+                    <TBODY>
+                      <TR>
+                        <TD><B><IMG src="images/cms-ico1.gif" 
+                  align=absMiddle>&nbsp;&nbsp;&nbsp;</B><FONT 
+                  color=#ff3300><B>并购交易社区</B></FONT></TD>
+                      </TR>
+                    </TBODY>
+                  </TABLE>
+                  <TABLE style="MARGIN-TOP: 10px; MARGIN-BOTTOM: 10px" cellSpacing=0 
+            cellPadding=4 width="100%" border=0>
+                    <TBODY>
+                      
+					  
+		
+					  
+					  
+                      <TR>
+                        <TD><IMG src="images/plus-.gif" align=absMiddle> <A href="forum_fuwu.asp?action=add" 
+                  target=mainFrame>文章添加 √</A></TD>
+                      </TR>
+                      <TR>
+                        <TD><IMG src="images/plus-.gif" align=absMiddle> <A 
+                  href="forum_fuwu.asp?action=list" 
+                  target=mainFrame>文章管理</A></TD>
+                      </TR>
+                    </TBODY>
+                  </TABLE>
              
                 
                   <TABLE 
