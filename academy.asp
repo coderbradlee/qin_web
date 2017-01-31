@@ -1,25 +1,10 @@
 <!--#include file="conn.asp" -->
 <!--#include file="Function_Page.asp" -->
 <%
-		N=request.QueryString("a")
-		set rh=server.CreateObject("adodb.recordset")
-		if n<>"" then
-		seh="select * from jd_caseclass where id="&N&""
-		else
-		seh="select * from jd_caseclass order by id asc"
-		end if
-		rh.open seh,conn,1,1
-		if not rh.eof then
-		N=rh("id")
-		a_title=rh("classname")
-		aid=rh("id")
-		end if
-		rh.close:set rh=nothing
-		if a_title="" then a_title="智本汇商学院"
-		
-		mf="case"
-		%>	
-
+	 mf="academy"	
+	 a_title="智本汇商学院"					  
+									  
+%>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -51,25 +36,18 @@
 					
 	                if aid<>"" then aid=int(aid)
 					set res=server.createobject("adodb.recordset")
-					sql="select * from jd_caseclass order by flag asc"
-					res.open sql,conn,1,1
-					
-					if aid<>"" then
-					i=1
-					else
-					i=0 
-					end if					
+					sql="select * from academy_newsclass order by flag asc"
+					res.open sql,conn,1,1	
 					do while not res.eof
 
 					%> 
 
- <li><a href="case.asp?a=<%=res("id")%>"<%=res("classname")%></a></li>
+ <li><a href="academy_list.asp?a=<%=res("id")%>"  ><%=res("classname")%></a></li>
     
     
         
 <%
 					  res.movenext
-					  i=i+1
 					  loop
 					  res.close
 					  set res=nothing
@@ -85,18 +63,14 @@
  <!-- .ncenter -->
  <div class="ncenter">
 	<ul class="nc_title">首页 > 智本汇商学院  <span> > <% =a_title %></span></ul>
-   	<%call banner(202)%>
-    <ul class="nbody" style="width:100%;">
+   	<%call banner(200)%>
+    <ul class="nbody">
   
-  <style>
-  	.news_hti{ background:#D4D4D4}
-	.news_hti h1{ font-weight:normal; color:#000; padding-left:20px;}
-	.news_main .fl img{ width:133px; height:58px; border:0}
-  </style>
+  
   
     	  <%
 					set res=server.createobject("adodb.recordset")
-					sql="select * from jd_case order by id desc"
+					sql="select * from academy_newsclass order by flag asc"
 					res.open sql,conn,1,1	
 					do while not res.eof
 
@@ -104,18 +78,21 @@
   
   
 	  <div class="news_home">
- 			 <ul class="news_hti"><h1><% =res("title") %></h1> <a href="http://<% =res("wblink") %>" target="_blank" ><% =res("wblink") %></a></ul>
+ 			 <ul class="news_hti"><h1><% =res("classname") %></h1> <a href="academy_list.asp?a=<% =res("id") %>" >more</a></ul>
           <ul class="news_main">
            	  <div class="fl"><img src="uploadfile/<% =res("tupian") %>"  /></div>
-              <div class="fr"><% =res("content") %></div>
+              <div class="fr"><ul class="honor"> 
+     
+     
+     
   <%
 					set rs=server.createobject("adodb.recordset")
-					sql="select top 6 * from jd_case  where classid="&res("id")&" order by id desc"
+					sql="select top 6 * from academy_news  where classid="&res("id")&" order by id desc"
 					rs.open sql,conn,1,1	
 					do while not rs.eof
 
 					%> 
-		<li><a href="news_show.asp?id=<% =rs("id") %>" ><% =got(rs("title"),36) %></a><span>[<% =FormatDate(rs("addtime"),4) %>]</span></li>
+		<li><a href="academy_show.asp?id=<% =rs("id") %>" ><% =got(rs("title"),36) %></a><span>[<% =FormatDate(rs("addtime"),4) %>]</span></li>
 				
 <%
 rs.movenext

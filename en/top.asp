@@ -75,7 +75,7 @@
               <div></div>
             
             </ul></li>
-            <li style="width:117px; margin-left:25px;"><a href="platform.asp" class="ap<% if  mf="platform"  then response.Write"2"%>" >platform</a><ul style="margin-left:-10px;">
+            <li><a href="platform.asp" class="ap<% if  mf="platform"  then response.Write"2"%>" >platform</a><ul>
             
             
                           <%
@@ -97,8 +97,9 @@
 					  res.close
 					  set res=nothing
 					  %>
+             <div></div>
             </ul></li>
-            <li style="width:117px; margin-left:25px;"><a href="forum.asp" class="ap<% if  mf="forum"  then response.Write"2"%>" >forum</a><ul style="margin-left:-10px;">
+            <li><a href="forum.asp" class="ap<% if  mf="forum"  then response.Write"2"%>" >forum</a><ul>
             
             
                           <%
@@ -120,8 +121,9 @@
 					  res.close
 					  set res=nothing
 					  %>
+             <div></div>
             </ul></li>
-            <li style="margin-left:9px;"><a href="case.asp" class="ap<% if  mf="case"  then response.Write"2"%>" >Portfolio</a><ul>
+            <li><a href="case.asp" class="ap<% if  mf="case"  then response.Write"2"%>" >Portfolio</a><ul>
             
               <%
 					
@@ -140,7 +142,7 @@
 					  %>
               <div></div>
             </ul></li>
-            <li style="width:117px; margin-left:25px;"><a href="partner.asp" class="ap<% if  mf="partner"  then response.Write"2"%>" >partner</a><ul style="margin-left:-10px;">
+            <li><a href="partner.asp" class="ap<% if  mf="partner"  then response.Write"2"%>" >partner</a><ul>
             
             
                           <%
@@ -164,7 +166,7 @@
 					  %>
              <div></div>
             </ul></li>
-            <li style="margin-left:35px;"><a href="contact.asp" class="ap<% if  mf="contact"  then response.Write"2"%>" >Contact Us</a></li>
+            <li><a href="contact.asp" class="ap<% if  mf="contact"  then response.Write"2"%>" >Contact Us</a></li>
         </div>
     </div>
     

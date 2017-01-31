@@ -4,7 +4,7 @@
          
            <%
 					set rs=server.createobject("adodb.recordset")
-					sql="select top 8 * from jiedai_news  order by id desc"
+					sql="select top 8 * from zhibenhui_news  order by id desc"
 					rs.open sql,conn,1,1	
 					do while not rs.eof
 

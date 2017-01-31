@@ -128,9 +128,9 @@ return false;
 <TR>
 <TD width="100%" height=30 bgcolor="#FFFFFF" style="border-bottom:2px solid #BCBCBC; padding-left:15px;"><STRONG><FONT style="COLOR: #003366">&nbsp;联系我们</FONT></STRONG></TD></TR>
 <TR>
-<TD bgcolor="#FFFFFF" style="LINE-HEIGHT: 35px; PADDING-LEFT: 40px; PADDING-TOP: 13px"><STRONG>上海市长宁区宣化路300号，华宁国际广场南塔16层</STRONG> <BR>电 话： +86 21 6167 7313<BR>传 真： +86 21 6167 7286<BR>haidecapital@haidecapital.com</TD></TR></TBODY></TABLE>
+<TD bgcolor="#FFFFFF" style="LINE-HEIGHT: 35px; PADDING-LEFT: 40px; PADDING-TOP: 13px"><STRONG>上海市xxxx</STRONG> <BR>电 话： +86 21 xxxx xxxx<BR>传 真： +86 21 xxxx xxxx<BR>xxx@xxx.com</TD></TR></TBODY></TABLE>
 <p style="font-weight:bold">&nbsp;</p>
-<p style="font-weight:bold">同时，我们投资的被投企业也为您的加入敞开大门。 点击 <a href="case.asp" target="_blank">智本汇商学院</a> 为您的职业生涯寻找最适合的起点。</p>
+<!--<p style="font-weight:bold">同时，我们投资的被投企业也为您的加入敞开大门。 点击 <a href="case.asp" target="_blank">智本汇商学院</a> 为您的职业生涯寻找最适合的起点。</p> -->
     </ul>
  </div>
  <!-- END .ncenter -->

@@ -113,7 +113,7 @@ a_title="网站地图"
                        	  <%
 		
 					set res=server.createobject("adodb.recordset")
-					sql="select * from jiedai_newsclass order by flag asc"
+					sql="select * from zhibenhui_newsclass order by flag asc"
 					res.open sql,conn,1,1	
 					do while not res.eof
 
@@ -133,17 +133,18 @@ a_title="网站地图"
     
             
             </ul></li>
-            <li class="sbg"><a href="case.asp" class="ap" >智本汇商学院</a><ul>
+
+            <li class="sbg"><a href="academy.asp" class="ap" >商学院</a><ul>
             
               <%
 					
 	              
 					set res=server.createobject("adodb.recordset")
-					sql="select * from jd_caseclass order by flag asc"
+					sql="select * from academy_newsclass order by flag asc"
 					res.open sql,conn,1,1				
 					do while not res.eof
 
-					%>  <li><a href="case.asp?a=<%=res("id")%>"  ><%=res("classname")%></a></li>
+					%>  <li><a href="academy_list.asp?a=<%=res("id")%>"  ><%=res("classname")%></a></li>
 <%
 					  res.movenext
 					  loop
@@ -152,30 +153,69 @@ a_title="网站地图"
 					  %>
   
             </ul></li>
-            <li><a href="wenhua.asp" class="ap" >企业文化</a><ul>
+            <li><a href="platform.asp" class="ap" >公众平台</a><ul>
             
-            
-                          <%
-					
-	              
+                       	  <%
+		
 					set res=server.createobject("adodb.recordset")
-					sql="select * from jiedai_qita where id=7 or id= 8 order by flag asc"
+					sql="select * from jiedai_qita where id=12 or id= 13 or id=14 or id= 15 or id=16 order by flag asc"
 					res.open sql,conn,1,1	
 					do while not res.eof
+
 					%> 
 
-  <li><a href="wenhua.asp?a=<%=res("id")%>"  ><%=res("classid")%></a></li>
+ <li><a href="platform.asp?a=<%=res("id")%>"  ><%=res("classid")%></a></li>
     
     
         
-          <%
+<%
 					  res.movenext
 					  loop
 					  res.close
 					  set res=nothing
 					  %>
-	<li ><A href="wenhua_list.asp" >文化生活</A></li>
- 
+         
+    
+            
+            </ul></li>
+
+            <li class="sbg"><a href="forum.asp" class="ap" >交易社区</a><ul>
+            
+              <%
+					
+	              
+					set res=server.createobject("adodb.recordset")
+					sql="select * from jiedai_qita where id=17 or id= 18 or id=19 or id= 20 order by flag asc"
+					res.open sql,conn,1,1				
+					do while not res.eof
+
+					%>  <li><a href="forum.asp?a=<%=res("id")%>"  ><%=res("classid")%></a></li>
+<%
+					  res.movenext
+					  loop
+					  res.close
+					  set res=nothing
+					  %>
+  
+            </ul></li>
+            <li class="sbg"><a href="partner.asp" class="ap" >合伙人</a><ul>
+            
+              <%
+					
+	              
+					set res=server.createobject("adodb.recordset")
+					sql="select * from jiedai_qita where id=9 or id= 10 or id=11 order by flag asc"
+					res.open sql,conn,1,1				
+					do while not res.eof
+
+					%>  <li><a href="partner.asp?a=<%=res("id")%>"  ><%=res("classid")%></a></li>
+<%
+					  res.movenext
+					  loop
+					  res.close
+					  set res=nothing
+					  %>
+  
             </ul></li>
             <li class="sbg"><a href="contact.asp" class="ap" >联系我们</a></li>
         </div>

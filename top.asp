@@ -21,7 +21,7 @@
    	  <h1 class="logo"><a href="index.asp" class="a100" >智本汇</a></h1>
         <div class="menus">
         
-        	<li class="home"><a href="index.asp" class="ap<% if mf="" or mf="index"  then response.Write"2"%>" >首页</a></li>
+        	<li class="ap"><a href="index.asp" class="ap" > 首页 </a></li>
             <li><a href="about.asp" class="ap<% if  mf="about"  then response.Write"2"%>" >关于我们</a><ul>
             
               <%
@@ -123,25 +123,32 @@
 					  %>
              <div></div>
             </ul></li>
-            <li><a href="case.asp" class="ap<% if  mf="case"  then response.Write"2"%>" >智本汇商学院</a><ul>
+             <li><a href="academy.asp" class="ap<% if  mf="news"  then response.Write"2"%>" >智本汇商学院</a><ul>
             
-              <%
-					
-	              
+                       	  <%
+		
 					set res=server.createobject("adodb.recordset")
-					sql="select * from jd_caseclass order by flag asc"
-					res.open sql,conn,1,1				
+					sql="select * from academy_newsclass order by flag asc"
+					res.open sql,conn,1,1	
 					do while not res.eof
 
-					%>  <li><a href="case.asp?a=<%=res("id")%>"  ><%=res("classname")%></a></li>
+					%> 
+
+ <li><a href="academy_list.asp?a=<%=res("id")%>"  ><%=res("classname")%></a></li>
+    
+    
+        
 <%
 					  res.movenext
 					  loop
 					  res.close
 					  set res=nothing
 					  %>
+         
               <div></div>
+            
             </ul></li>
+            
             <li><a href="partner.asp" class="ap<% if  mf="partner"  then response.Write"2"%>" >全球合伙人</a><ul>
             
             
@@ -166,7 +173,7 @@
 					  %>
              <div></div>
             </ul></li>
-            <li><a href="contact.asp" class="ap<% if  mf="contact"  then response.Write"2"%>" >联系我们</a></li>
+            <li><a href="contact.asp" class="ap" >联系我们</a></li>
         </div>
     </div>
     
