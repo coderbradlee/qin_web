@@ -31,10 +31,10 @@ a.baise:hover{ color:#F00}
 
 .nav_logo{ width:100%; height:77px;}
 .logo{ width:197px; height:65px; display:inline; margin-left:18px; float:left; background:url(../images/logo.gif) no-repeat;}
-/*.menus{ width:715px; height:77px; float:right; background:url(../images/menu.png)}
+.menus{ width:715px; height:77px; float:right; background:url(../images/menu.png)}/*
 .menus{ width:745px; height:77px; float:right;background: #9c5959;
-    color: #000000;}*/
-.menus{ width:745px; height:77px; float:right;background:url(../images/footbg.png) repeat-x;color:#FFF;}
+    color: #000000;}
+.menus{ width:745px; height:77px; float:right;background:url(../images/footbg.png) repeat-x;color:#FFF;}*/
 
 .menus li{ width:85px; display:inline; float:left; margin-left:5px; padding-top:30px; }
 /*.menus li a.ap,.menus li a.ap2{ display:block; width:100%; height:47px; text-indent:-9999em;background:#464646; color:#FFF}*/
