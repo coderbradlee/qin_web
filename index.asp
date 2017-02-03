@@ -39,7 +39,7 @@
     </div>
     
     <div class="ishehui fl">
-    	<h1 class="ishehuiti"><a href="honor.asp" class="a100" >企业社会责任</a></h1>
+    	<h1 class="ishehuiti"><a href="partner.asp" class="a100" >合伙人理念</a></h1>
     </div>
     
     
@@ -124,7 +124,7 @@ set rs=nothing
     
     
     <div class="ishehui fl"><center>
-      <a href="honor.asp" target="_blank"><img src="images/dot002.png" width="213" height="175" border="0" /></a>
+      <a href="partner.asp" target="_blank"><img src="images/dot002.png" width="213" height="175" border="0" /></a>
     </center></div>
     
     
