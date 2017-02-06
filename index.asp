@@ -7,7 +7,17 @@
 <meta http-equiv=X-UA-Compatible content=" IE=7 ">
 <meta http-equiv=X-UA-Compatible content=" IE=EmulateIE7 "> -->
 <!-- <meta  http-equiv="X-UA-Compatible"  content =" IE=8 "> -->
+<!-- //content的取值为webkit,ie-comp,ie-stand之一，区分大小写，分别代表用webkit内核，IE兼容内核，IE标准内核。 
+//若页面需默认用极速核，增加标签：
+<meta name="renderer" content="webkit"> 
+//若页面需默认用ie兼容内核，增加标签：
+<meta name="renderer" content="ie-comp"> 
+// 若页面需默认用ie标准内核，增加标签：
+<meta name="renderer" content="ie-stand"> -->
+<meta name="renderer" content="ie-stand">
+
 <meta  http-equiv="X-UA-Compatible"  content =" IE=9;IE=8 ">
+
 <TITLE><%=title%></TITLE>
 <meta name="keywords" content="<%=keywords_content%>" />
 <meta name="description" content="<%=description_content%>" />
@@ -28,22 +38,22 @@
 	
     <div class="inews fl">
     	<ul class="inewsti fl">
-        	<li><a href="news_list.asp?a=37" >�Ǳ�������</a></li>
-            <li><a href="news_list.asp?a=25" >ý�屨��</a></li>
-            <li><a href="news_list.asp?a=38" >������ҵ��̬</a></li>
+        	<li><a href="news_list.asp?a=37" >ÖÇ±¾»ãÐÂÎÅ</a></li>
+            <li><a href="news_list.asp?a=25" >Ã½Ìå±¨µÀ</a></li>
+            <li><a href="news_list.asp?a=38" >²¢¹ºÐÐÒµ¶¯Ì¬</a></li>
         </ul>
-        <ul class="imore fr"><a href="news.asp" class="a100" >����</a></ul>
+        <ul class="imore fr"><a href="news.asp" class="a100" >¸ü¶à</a></ul>
     </div>
     
     <div class="iabout fl">
     	<ul class="iaboutti">
-        	<h1><a href="about.asp" class="a100" >��˾���</a></h1>
-            <ul class="imore fr"><a href="about.asp" class="a100" >����</a></ul>
+        	<h1><a href="about.asp" class="a100" >¹«Ë¾¼ò½é</a></h1>
+            <ul class="imore fr"><a href="about.asp" class="a100" >¸ü¶à</a></ul>
         </ul>
     </div>
     
     <div class="ishehui fl">
-    	<h1 class="ishehuiti"><a href="partner.asp" class="a100" >�ϻ�������</a></h1>
+    	<h1 class="ishehuiti"><a href="partner.asp" class="a100" >ºÏ»ïÈËÀíÄî</a></h1>
     </div>
     
     
@@ -119,7 +129,7 @@ set rs=nothing
 	 ris.close
 	 set ris=nothing
 	if i_body="" then
-	response.Write"������Ϣ"
+	response.Write"ÔÝÎÞÐÅÏ¢"
 	else
 	response.Write i_body
 	end if		
