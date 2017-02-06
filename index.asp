@@ -14,16 +14,16 @@
 <meta name="renderer" content="ie-comp"> 
 // 若页面需默认用ie标准内核，增加标签：
 <meta name="renderer" content="ie-stand"> -->
-<meta name="renderer" content="webkit">
 
 <meta  http-equiv="X-UA-Compatible"  content =" IE=9;IE=8 ">
 
+<meta name="renderer" content="webkit">
 <TITLE><%=title%></TITLE>
 <meta name="keywords" content="<%=keywords_content%>" />
 <meta name="description" content="<%=description_content%>" />
+<meta  http-equiv="X-UA-Compatible"  content =" IE=9;IE=8 ">
 <meta name="renderer" content="ie-stand">
 
-<meta  http-equiv="X-UA-Compatible"  content =" IE=9;IE=8 ">
 <script type="text/javascript" src="js/jquery.min.js"></script>
 <script type="text/javascript" src="js/main.js" ></script>
 <link href="css/index.css" rel="stylesheet" type="text/css" />
