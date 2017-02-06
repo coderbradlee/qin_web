@@ -21,7 +21,7 @@
    	  <h1 class="logo"><a href="index.asp" class="a100" >智本汇</a></h1>
         <div class="menus">
         
-        	<li class="ap" margin-left:30px;><a href="index.asp" class="ap" > 首页 </a></li>
+        	<li class="ap"><a href="index.asp" class="ap" padding-left=30px> 首页 </a></li>
             <li><a href="about.asp" class="ap3" >关于我们</a><ul>
             
               <%
