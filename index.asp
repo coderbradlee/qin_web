@@ -16,8 +16,8 @@
 <meta name="renderer" content="ie-stand"> -->
 
 <meta  http-equiv="X-UA-Compatible"  content =" IE=9;IE=8 ">
-<meta name="renderer" content="ie-stand" /> 
-<!-- <meta name="renderer" content="webkit"> -->
+<!-- <meta name="renderer" content="ie-stand" />  -->
+<meta name="renderer" content="webkit">
 <TITLE><%=title%></TITLE>
 <meta name="keywords" content="<%=keywords_content%>" />
 <meta name="description" content="<%=description_content%>" />
