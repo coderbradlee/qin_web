@@ -21,8 +21,8 @@
    	  <h1 class="logo"><a href="index.asp" class="a100" >智本汇</a></h1>
         <div class="menus">
         
-        	<li class="ap"><a href="index.asp" class="ap2" > 首页 </a></li>
-            <li><a href="about.asp" class="ap<% if  mf="about"  then response.Write"2"%>" >关于我们</a><ul>
+        	<li class="ap"><a href="index.asp" class="ap" > 首页 </a></li>
+            <li><a href="about.asp" class="ap3" >关于我们</a><ul>
             
               <%
 					
@@ -50,7 +50,7 @@
             
             <div></div>
             </ul></li>
-            <li><a href="news.asp" class="ap<% if  mf="news"  then response.Write"2"%>" >新闻资讯</a><ul>
+            <li><a href="news.asp" class="ap3" >新闻资讯</a><ul>
             
                        	  <%
 		
@@ -173,7 +173,7 @@
 					  %>
              <div></div>
             </ul></li>
-            <li><a href="contact.asp" class="ap" >联系我们</a></li>
+            <li><a href="contact.asp" class="ap3" >联系我们</a></li>
         </div>
     </div>
     
