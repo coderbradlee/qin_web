@@ -14,7 +14,7 @@
 <meta name="renderer" content="ie-comp"> 
 // 若页面需默认用ie标准内核，增加标签：
 <meta name="renderer" content="ie-stand"> -->
-<meta name="renderer" content="ie-stand">
+<meta name="renderer" content="ie-comp">
 
 <meta  http-equiv="X-UA-Compatible"  content =" IE=9;IE=8 ">
 
