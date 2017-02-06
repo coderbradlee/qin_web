@@ -36,7 +36,7 @@ a.baise:hover{ color:#F00}
     color: #000000;}
 .menus{ width:745px; height:77px; float:right;background:url(../images/footbg.png) repeat-x;color:#FFF;}*/
 
-.menus li{ width:85px; display:inline; float:left; margin-left:5px; padding-top:30px; }
+.menus li{ width:85px; display:inline; float:left; margin-left:5px; padding-top:30px; -moz-opacity:0.5; opacity:0.5; }
 /*.menus li a.ap,.menus li a.ap2{ display:block; width:100%; height:47px; text-indent:-9999em;background:#464646; color:#FFF}*/
 .menus li a.ap,.menus li a.ap2{ width:55px; height:47px; text-indent:-9999em; color:#FFF;font-weight:bold;font-size:13px;}
 /*.menus li a.ap:hover,.menus li a.ap2{ background:url(../images/menu_.gif) no-repeat center bottom}
