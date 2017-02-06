@@ -21,7 +21,7 @@
 <TITLE><%=title%></TITLE>
 <meta name="keywords" content="<%=keywords_content%>" />
 <meta name="description" content="<%=description_content%>" />
-<meta name="renderer" content="webkit">
+<meta name="renderer" content="ie-comp">
 
 <meta  http-equiv="X-UA-Compatible"  content =" IE=9;IE=8 ">
 <script type="text/javascript" src="js/jquery.min.js"></script>
