@@ -19,9 +19,9 @@
 
 <meta  http-equiv="X-UA-Compatible"  content =" IE=8 ">
 <!-- <meta name="renderer" content="ie-stand" />  -->
-<!-- <meta name="renderer" content="webkit"> -->
-<!-- <meta name="renderer" content="webkit" /> -->
-<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+<meta name="renderer" content="webkit">
+
 <meta http-equiv="Pragma" content="no-cache">
 <TITLE><%=title%></TITLE>
 <meta name="keywords" content="<%=keywords_content%>" />
