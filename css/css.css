@@ -51,11 +51,11 @@ a.baise:hover{ color:#F00}
 .menus li a.ap:hover,.menus li a.ap2{ background:url() no-repeat center bottom}*/
 .menus li.home{ margin-left:84px; width:70px;}
 /*.menus li ul{ width:84px; margin-left:-5px; position:absolute; z-index:99; display:none; padding-top:2px; }*/
-.menus li ul{ width:84px; z-index:99; display:none; padding-top:2px; }
+.menus li ul{ width:84px; position:absolute; z-index:99; display:none; padding-top:2px; }
 .menus li ul li{ width:100%; height:21px; line-height:18px; text-align:left; text-indent:12px; background:url(../images/blank.gif); float:left; margin:0; padding:0; }
 .menus li ul li a{ height:19px; line-height:19px; display:block; position:relative; z-index:100}
 .menus li ul li a:hover{ background:#464646; color:#FFF}
-.menus li ul div{ position:absolute; width:100%; height:100%; _height:400px; background:url(../images/mbg.gif) left 0px; left:0; top:0; filter:alpha(opacity=20); opacity: 0.20;}
+.menus li ul div{ position:absolute; width:100%; height:100%; _height:400px; background:url(../images/mbg.gif) left -3px; left:0; top:0; filter:alpha(opacity=20); opacity: 0.20;}
 
 
 .banner,.ititle,.imain,.footer,.nmain{ width:961px; margin:0 auto;}
