@@ -3,22 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
-<!-- 
-<meta http-equiv=X-UA-Compatible content=" IE=7 ">
-<meta http-equiv=X-UA-Compatible content=" IE=EmulateIE7 "> -->
-<!-- <meta  http-equiv="X-UA-Compatible"  content =" IE=8 "> -->
-<!-- //content鐨勫彇鍊间负webkit,ie-comp,ie-stand涔嬩竴锛屽尯鍒嗗ぇ灏忓啓锛屽垎鍒唬琛ㄧ敤webkit鍐呮牳锛孖E鍏煎鍐呮牳锛孖E鏍囧噯鍐呮牳銆� 
-//鑻ラ〉闈㈤渶榛樿鐢ㄦ瀬閫熸牳锛屽鍔犳爣绛撅細
-<meta name="renderer" content="webkit"> 
-//鑻ラ〉闈㈤渶榛樿鐢╥e鍏煎鍐呮牳锛屽鍔犳爣绛撅細
-<meta name="renderer" content="ie-comp"> 
-// 鑻ラ〉闈㈤渶榛樿鐢╥e鏍囧噯鍐呮牳锛屽鍔犳爣绛撅細
-<meta name="renderer" content="ie-stand"> -->
 
-<!-- <meta  http-equiv="X-UA-Compatible"  content =" IE=8 "> -->
-<!-- <meta name="renderer" content="ie-stand" />  -->
-<!-- <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1"> -->
-<!-- <meta name="renderer" content="webkit"> -->
 
 <TITLE><%=title%></TITLE>
 <meta name="keywords" content="<%=keywords_content%>" />
@@ -43,22 +28,22 @@
 	
     <div class="inews fl">
     	<ul class="inewsti fl">
-        	<li><a href="news_list.asp?a=37" >脰脟卤戮禄茫脨脗脦脜</a></li>
-            <li><a href="news_list.asp?a=25" >脙陆脤氓卤篓碌脌</a></li>
-            <li><a href="news_list.asp?a=38" >虏垄鹿潞脨脨脪碌露炉脤卢</a></li>
+        	<li><a href="news_list.asp?a=37" >智本汇新闻</a></li>
+            <li><a href="news_list.asp?a=25" >媒体报道</a></li>
+            <li><a href="news_list.asp?a=38" >并购行业动态</a></li>
         </ul>
-        <ul class="imore fr"><a href="news.asp" class="a100" >赂眉露脿</a></ul>
+        <ul class="imore fr"><a href="news.asp" class="a100" >更多</a></ul>
     </div>
     
     <div class="iabout fl">
     	<ul class="iaboutti">
-        	<h1><a href="about.asp" class="a100" >鹿芦脣戮录貌陆茅</a></h1>
-            <ul class="imore fr"><a href="about.asp" class="a100" >赂眉露脿</a></ul>
+        	<h1><a href="about.asp" class="a100" >关于我们</a></h1>
+            <ul class="imore fr"><a href="about.asp" class="a100" >更多</a></ul>
         </ul>
     </div>
     
     <div class="ishehui fl">
-    	<h1 class="ishehuiti"><a href="partner.asp" class="a100" >潞脧禄茂脠脣脌铆脛卯</a></h1>
+    	<h1 class="ishehuiti"><a href="partner.asp" class="a100" >全球合伙人</a></h1>
     </div>
     
     
@@ -134,7 +119,7 @@ set rs=nothing
 	 ris.close
 	 set ris=nothing
 	if i_body="" then
-	response.Write"脭脻脦脼脨脜脧垄"
+	response.Write"暂无信息"
 	else
 	response.Write i_body
 	end if		
