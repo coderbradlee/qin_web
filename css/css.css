@@ -31,21 +31,24 @@ a.baise:hover{ color:#F00}
 
 .nav_logo{ width:100%; height:77px;}
 .logo{ width:197px; height:65px; display:inline; margin-left:18px; float:left; background:url(../images/logo.gif) no-repeat;}
-.menus{ width:715px; height:77px; float:right; background:url(../images/menu.png);}/*
+.menus{ width:715px; height:77px; float:right; background:url(../images/menu.png);}
+/*
 .menus{ width:745px; height:77px; float:right;background: #9c5959;
     color: #000000;}
 .menus{ width:745px; height:77px; float:right;background:url(../images/footbg.png) repeat-x;color:#FFF;}*/
 
-/*.menus li{ width:80px; display:inline; float:left; margin-left:5px; padding-top:30px;}*/
-.menus li{ display:inline; float:left; margin-left:5px; padding-top:30px;padding-left:10px;padding-right:10px;}
-/*.menus li a.ap,.menus li a.ap2{ display:block; width:100%; height:47px; text-indent:-9999em;background:#464646; color:#FFF}*/
-.menus li a.ap,.menus li a.ap2{ display:inline; width:55px; height:47px; text-indent:-9999em; color:#FFF;font-weight:bold;font-size:12px;}
+.menus li{ width:80px; display:inline; float:left; margin-left:5px; padding-top:30px;}
+/*.menus li{ display:inline; float:left; margin-left:5px; padding-top:30px;padding-left:10px;padding-right:10px;}*/
+/*.menus li a.ap,.menus li a.ap2{ display:block; width:100%; height:47px; text-indent:-9999em;background:#464646; color:#FFF}
+.menus li a.ap,.menus li a.ap2{ display:inline; width:55px; height:47px; text-indent:-9999em; color:#FFF;font-weight:bold;font-size:12px;}*/
+.menus li a.ap,.menus li a.ap2{ display:block; width:100%; height:47px; text-indent:-9999em;}
 .menus li a.ap3{ width:35px; height:47px; text-indent:-9999em; color:#FFF;font-weight:bold;font-size:12px;}
 .menus li a.ap4{ width:35px; height:47px; text-indent:-9999em; color:#FFF;font-weight:bold;font-size:12px;padding-left:30px;}
-/*.menus li a.ap:hover,.menus li a.ap2{ background:url(../images/menu_.gif) no-repeat center bottom}
+.menus li a.ap:hover,.menus li a.ap2{ background:url(../images/menu_.gif) no-repeat center bottom}
+/*
 .menus li a.ap:hover,.menus li a.ap2{ background:url() no-repeat center bottom}
-.menus li a.ap:hover,.menus li a.ap2{ background:#ebebeb; }*/
-.menus li a.ap:hover,.menus li a.ap2{ background:url() no-repeat center bottom}
+.menus li a.ap:hover,.menus li a.ap2{ background:#ebebeb; }
+.menus li a.ap:hover,.menus li a.ap2{ background:url() no-repeat center bottom}*/
 .menus li.home{ margin-left:20px; width:70px;background:#ebebeb; color:#464646}
 .menus li ul{ width:84px; margin-left:-5px; position:absolute; z-index:99; display:none; padding-top:2px; }
 .menus li ul li{ width:100%; height:21px; line-height:18px; text-align:left; text-indent:12px; background:url(../images/blank.gif); float:left; margin:0; padding:0; }
