@@ -22,7 +22,7 @@
         <div class="menus">
         
         	<li class="ap"><a href="index.asp" class="ap"> 首页 </a></li>
-            <li><a href="about.asp" class="ap">关于我们</a><ul style="margin-left: -10px;" >
+            <li><a href="about.asp" class="ap">关于我们</a><ul>
             
               <%
 					
