@@ -22,7 +22,7 @@
         <div class="menus">
         
         	<li class="ap"><a href="index.asp" class="ap"> 首页 </a></li>
-            <li><a href="about.asp" class="ap3" >关于我们</a><ul>
+            <li><a href="about.asp" class="ap" >关于我们</a><ul>
             
               <%
 					
@@ -75,7 +75,7 @@
               <div></div>
             
             </ul></li>
-            <li><a href="platform.asp" class="ap<% if  mf="platform"  then response.Write"2"%>" >并购公众平台</a><ul>
+            <li><a href="platform.asp" class="ap" >并购公众平台</a><ul>
             
             
                           <%
@@ -99,7 +99,7 @@
 					  %>
              <div></div>
             </ul></li>
-             <li><a href="forum.asp" class="ap<% if  mf="forum"  then response.Write"2"%>" >并购交易社区</a><ul>
+             <li><a href="forum.asp" class="ap" >并购交易社区</a><ul>
             
             
                           <%
@@ -123,7 +123,7 @@
 					  %>
              <div></div>
             </ul></li>
-             <li><a href="academy.asp" class="ap<% if  mf="news"  then response.Write"2"%>" >智本汇商学院</a><ul>
+             <li><a href="academy.asp" class="ap" >智本汇商学院</a><ul>
             
                        	  <%
 		
@@ -149,7 +149,7 @@
             
             </ul></li>
             
-            <li><a href="partner.asp" class="ap<% if  mf="partner"  then response.Write"2"%>" >全球合伙人</a><ul>
+            <li><a href="partner.asp" class="ap" >全球合伙人</a><ul>
             
             
                           <%
@@ -173,7 +173,7 @@
 					  %>
              <div></div>
             </ul></li>
-            <li><a href="contact.asp" class="ap3" >联系我们</a></li>
+            <li><a href="contact.asp" class="ap" >联系我们</a></li>
         </div>
     </div>
     
