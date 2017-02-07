@@ -50,7 +50,7 @@
             
             <div></div>
             </ul></li>
-            <li><a href="news.asp" class="ap" >新闻资讯</a><ul style="margin-left: -10px;" >
+            <li><a href="news.asp" class="ap" >新闻资讯</a><ul style="margin-left: -13px;" >
             
                        	  <%
 		
@@ -75,7 +75,7 @@
               <div></div>
             
             </ul></li>
-            <li><a href="platform.asp" class="ap" >并购公众平台</a><ul style="margin-left: -10px;" >
+            <li><a href="platform.asp" class="ap" >并购公众平台</a><ul style="margin-left: -15px;" >
             
             
                           <%
