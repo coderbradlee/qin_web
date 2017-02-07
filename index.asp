@@ -17,10 +17,10 @@
 // 若页面需默认用ie标准内核，增加标签：
 <meta name="renderer" content="ie-stand"> -->
 
-<meta  http-equiv="X-UA-Compatible"  content =" IE=8 ">
+<!-- <meta  http-equiv="X-UA-Compatible"  content =" IE=8 "> -->
 <!-- <meta name="renderer" content="ie-stand" />  -->
-<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
-<meta name="renderer" content="webkit">
+<!-- <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1"> -->
+<!-- <meta name="renderer" content="webkit"> -->
 
 <meta http-equiv="Pragma" content="no-cache">
 <TITLE><%=title%></TITLE>
