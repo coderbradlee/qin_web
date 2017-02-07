@@ -22,7 +22,7 @@
         <div class="menus">
         
         	<li class="ap"><a href="index.asp" class="ap"> 首页 </a></li>
-            <li><a href="about.asp" class="ap" >关于我们</a><ul margin-left:-20px;>
+            <li><a href="about.asp" class="ap" >关于我们</a><ul style="margin-left: 20px;" >
             
               <%
 					
@@ -50,7 +50,7 @@
             
             <div></div>
             </ul></li>
-            <li><a href="news.asp" class="ap" >新闻资讯</a><ul margin-left:-7px;>
+            <li><a href="news.asp" class="ap" >新闻资讯</a><ul>
             
                        	  <%
 		

@@ -44,7 +44,7 @@ a.baise:hover{ color:#F00}
 .menus li a.ap,.menus li a.ap2{ display:block; width:100%; height:47px; text-indent:-9999em;}
 .menus li a.ap3{ width:35px; height:47px; text-indent:-9999em; color:#FFF;font-weight:bold;font-size:12px;}
 .menus li a.ap4{ width:35px; height:47px; text-indent:-9999em; color:#FFF;font-weight:bold;font-size:12px;padding-left:30px;}
-.menus li a.ap:hover,.menus li a.ap2{ background:url(../images/menu_.gif) no-repeat left bottom}
+.menus li a.ap:hover,.menus li a.ap2{ background:url(../images/menu_.gif) no-repeat center bottom}
 /*
 .menus li a.ap:hover,.menus li a.ap2{ background:url() no-repeat center bottom}
 .menus li a.ap:hover,.menus li a.ap2{ background:#ebebeb; }
