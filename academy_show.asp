@@ -72,7 +72,7 @@ ra.update
 
 					%> 
 
- <li><a href="news_list.asp?a=<%=res("id")%>" <%if aid=int(res("id"))  then  response.Write"class=""focus""" end if%> ><%=res("classname")%></a></li>
+ <li><a href="academy_list.asp?a=<%=res("id")%>" <%if aid=int(res("id"))  then  response.Write"class=""focus""" end if%> ><%=res("classname")%></a></li>
     
     
         

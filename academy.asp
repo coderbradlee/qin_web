@@ -13,7 +13,7 @@
 <TITLE><%=a_title%>_<%=title%></TITLE>
 <meta name="keywords" content="<%=keywords_content%>" />
 <meta name="description" content="<%=description_content%>" />
-<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+<meta http-equiv="X-UA-Compatible" content="IE=8" />
 <script type="text/javascript" src="js/jquery.min.js"></script>
 <script type="text/javascript" src="js/main.js" ></script>
 <link href="css/main.css" rel="stylesheet" type="text/css" />
