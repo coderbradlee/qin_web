@@ -1,34 +1,46 @@
 <!--#include file="conn.asp" -->
+<%
 
-<% 	set ris=server.createobject("adodb.recordset")
-	if request.QueryString("a")="" then
-	sqli="select * from jiedai_yinhang"
-	else
-    sqli="select * from jiedai_yinhang where id="&request.QueryString("a")
-	end if
-	 ris.open sqli,conn,1,1
-									  
-	a_title=ris("classid")
-	a_body=ris("body")
-	aid=ris("id")
-	bimg=ris("tupian")
+		
+Jid=checkStr(request.QueryString("id"))
+if not isnumeric(jid) then
+response.write"参数有误"
+response.end
+end if
 
-		  
-	 ris.close
-	 set ris=nothing
-	  if a_body="" then a_body="资料整理更新中···"
-									  
-	 a_body=LoseStyleTag(a_body) '过滤STYLE	
-	 
-	 mf="about"						  
-									  
-%>
+
+set ra=server.createobject("adodb.recordset")
+sql="select * from academy_news where id="&jid
+ra.open sql,conn,1,3
+ra("click")=ra("click")+1
+N=ra("classid")
+ra.update
+
+	set rh=server.CreateObject("adodb.recordset")
+		if N<>"" then
+		seh="select * from academy_newsclass where id="&N&""
+		else
+		seh="select * from academy_newsclass order by id asc"
+		end if
+		rh.open seh,conn,1,1	
+		a_title=rh("classname")
+		aid=rh("id")
+		N=aid
+		bimg=rh("tupian")
+		rh.close:set rh=nothing
+		
+		
+
+		
+		
+		%>	
+
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
-<TITLE><%=a_title%>_<%=title%></TITLE>
+<TITLE><%=ra("title")%>_<%=a_title%>_<%=title%></TITLE>
 <meta name="keywords" content="<%=keywords_content%>" />
 <meta name="description" content="<%=description_content%>" />
 <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
@@ -50,33 +62,27 @@
     	<ul class="left_list">
         	
             
-                          <%
+                    	  <%
 					
-	              
+	                if aid<>"" then aid=int(aid)
 					set res=server.createobject("adodb.recordset")
-					sql="select * from jiedai_yinhang order by flag asc"
-					res.open sql,conn,1,1
-					if aid<>"" then
-					i=1
-					else
-					i=0 
-					end if					
+					sql="select * from academy_newsclass order by flag asc"
+					res.open sql,conn,1,1	
 					do while not res.eof
+
 					%> 
 
-  <li><a href="About.asp?a=<%=res("id")%>" <%if aid=int(res("id")) or i=0 then  response.Write"class=""focus""" end if%> ><%=res("classid")%></a></li>
+ <li><a href="academy_list.asp?a=<%=res("id")%>" <%if aid=int(res("id"))  then  response.Write"class=""focus""" end if%> ><%=res("classname")%></a></li>
     
     
         
-          <%
+<%
 					  res.movenext
-					  i=i+1
 					  loop
 					  res.close
 					  set res=nothing
 					  %>
-	<li><A href="honor.asp" >公益与荣誉</A></li>
-            
+         
             
             
         </ul>
@@ -86,11 +92,16 @@
  
  <!-- .ncenter -->
  <div class="ncenter">
-	<ul class="nc_title">首页 > 关于我们  <span> > <% =a_title %></span></ul>
+	<ul class="nc_title">首页 > 智本汇商学院  <span> > <% =a_title %></span></ul>
    	<%call banner2(bimg)%>
     <ul class="nbody">
-    
- <% =a_body %>
+  		
+							<p style="font-weight:bold; text-align:center"><%=ra("title")%></p>
+                            <p><%=ra("content")%></p>
+                   
+                            
+                            
+
 
     
     </ul>
@@ -101,7 +112,7 @@
     <div class="nright">
     	
         
-        <!--#include file="right.asp" -->
+        <!--#include file="cright.asp" -->
 
         
     </div>

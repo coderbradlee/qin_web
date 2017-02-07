@@ -26,7 +26,7 @@ ra.update
 		a_title=rh("classname")
 		aid=rh("id")
 		N=aid
-		bimg=rh("images")
+		bimg=rh("tupian")
 		rh.close:set rh=nothing
 		
 		
