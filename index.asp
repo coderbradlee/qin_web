@@ -22,11 +22,10 @@
 <!-- <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1"> -->
 <!-- <meta name="renderer" content="webkit"> -->
 
-<meta http-equiv="Pragma" content="no-cache">
 <TITLE><%=title%></TITLE>
 <meta name="keywords" content="<%=keywords_content%>" />
 <meta name="description" content="<%=description_content%>" />
-<!-- <meta  http-equiv="X-UA-Compatible"  content =" IE=9;IE=8 "> -->
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
 <!-- <meta name="renderer" content="ie-stand"> -->
 
 <script type="text/javascript" src="js/jquery.min.js"></script>
