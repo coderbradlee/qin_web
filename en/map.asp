@@ -114,7 +114,7 @@ a_title="Site Map"
                        	  <%
 		
 					set res=server.createobject("adodb.recordset")
-					sql="select * from jiedai_newsclass where e_classname<>'' order by flag asc"
+					sql="select * from zhibenhui_newsclass where e_classname<>'' order by flag asc"
 					res.open sql,conn,1,1	
 					do while not res.eof
 
@@ -134,17 +134,17 @@ a_title="Site Map"
     
             
             </ul></li>
-            <li class="sbg"><a href="case.asp" class="ap" >Portfolio</a><ul>
+            <li class="sbg"><a href="academy.asp" class="ap" >academy</a><ul>
             
               <%
 					
 	              
 					set res=server.createobject("adodb.recordset")
-					sql="select * from jd_caseclass where e_classname<>'' order by flag asc"
+					sql="select * from academy_newsclass where e_classname<>'' order by flag asc"
 					res.open sql,conn,1,1				
 					do while not res.eof
 
-					%>  <li><a href="case.asp?a=<%=res("id")%>"  ><%=res("e_classname")%></a></li>
+					%>  <li><a href="academy_list.asp?a=<%=res("id")%>"  ><%=res("e_classname")%></a></li>
 <%
 					  res.movenext
 					  loop
@@ -153,19 +153,19 @@ a_title="Site Map"
 					  %>
   
             </ul></li>
-            <li><a href="wenhua.asp" class="ap" >Corperate Culture</a><ul>
+            <li><a href="platform.asp" class="ap" >platform</a><ul>
             
             
                           <%
 					
 	              
 					set res=server.createobject("adodb.recordset")
-					sql="select * from jiedai_qita where id=7 or id= 8 order by flag asc"
+					sql="select * from jiedai_qita where id=12 or id= 13 or id=14 or id= 15 or id=16 order by flag asc"
 					res.open sql,conn,1,1	
 					do while not res.eof
 					%> 
 
-  <li><a href="wenhua.asp?a=<%=res("id")%>"  ><%=res("e_classid")%></a></li>
+  <li><a href="platform.asp?a=<%=res("id")%>"  ><%=res("e_classid")%></a></li>
     
     
         
@@ -175,8 +175,43 @@ a_title="Site Map"
 					  res.close
 					  set res=nothing
 					  %>
-	<li ><A href="wenhua_list.asp" >Culture Activities</A></li>
- 
+            </ul></li>
+            <li class="sbg"><a href="forum.asp" class="ap" >forum</a><ul>
+              <%
+					
+	              
+					set res=server.createobject("adodb.recordset")
+					sql="select * from jiedai_qita where id=17 or id= 18 or id=19 or id= 20 order by flag asc"
+					res.open sql,conn,1,1				
+					do while not res.eof
+
+					%>  <li><a href="forum.asp?a=<%=res("id")%>"  ><%=res("e_classid")%></a></li>
+<%
+					  res.movenext
+					  loop
+					  res.close
+					  set res=nothing
+					  %>
+  
+            </ul></li>
+            <li class="sbg"><a href="partner.asp" class="ap" >∫œªÔ»À</a><ul>
+            
+              <%
+					
+	              
+					set res=server.createobject("adodb.recordset")
+					sql="select * from jiedai_qita where id=9 or id= 10 or id=11 order by flag asc"
+					res.open sql,conn,1,1				
+					do while not res.eof
+
+					%>  <li><a href="partner.asp?a=<%=res("id")%>"  ><%=res("e_classid")%></a></li>
+<%
+					  res.movenext
+					  loop
+					  res.close
+					  set res=nothing
+					  %>
+  
             </ul></li>
             <li class="sbg"><a href="contact.asp" class="ap" >Contact Us</a></li>
       </div>

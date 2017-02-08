@@ -21,8 +21,8 @@
    	  <h1 class="logo"><a href="index.asp" class="a100" >Capital</a></h1>
         <div class="menus">
         
-        	<li class="home"><a href="index.asp" class="ap<% if mf="" or mf="index"  then response.Write"2"%>" >Home</a></li>
-            <li><a href="about.asp" class="ap<% if  mf="about"  then response.Write"2"%>" >About Us</a><ul style="width:170px;">
+        	<li class="home"><a href="index.asp" class="ap" >Home</a></li>
+            <li><a href="about.asp" class="ap" >About Us</a><ul style="margin-left: -6px;">
             
               <%
 					
@@ -50,7 +50,7 @@
             
             <div></div>
             </ul></li>
-            <li><a href="news.asp" class="ap<% if  mf="news"  then response.Write"2"%>" >News</a><ul>
+            <li><a href="news.asp" class="ap" >News</a><ul style="margin-left: -15px;" >
             
                        	  <%
 		
@@ -75,7 +75,7 @@
               <div></div>
             
             </ul></li>
-            <li><a href="platform.asp" class="ap<% if  mf="platform"  then response.Write"2"%>" >platform</a><ul>
+            <li><a href="platform.asp" class="ap" >platform</a><ul style="margin-left: -15px;" >
             
             
                           <%
@@ -99,7 +99,7 @@
 					  %>
              <div></div>
             </ul></li>
-            <li><a href="forum.asp" class="ap<% if  mf="forum"  then response.Write"2"%>" >forum</a><ul>
+            <li><a href="forum.asp" class="ap" >forum</a><ul>
             
             
                           <%
@@ -123,17 +123,18 @@
 					  %>
              <div></div>
             </ul></li>
-            <li><a href="case.asp" class="ap<% if  mf="case"  then response.Write"2"%>" >Portfolio</a><ul>
+            <li><a href="academy.asp" class="ap" >academy</a><ul style="margin-left: 5px;" >
             
               <%
 					
 	              
 					set res=server.createobject("adodb.recordset")
-					sql="select * from jd_caseclass where e_classname<>'' order by flag asc"
+					sql="select * from academy_newsclass where e_classname<>'' order by flag asc"
 					res.open sql,conn,1,1				
 					do while not res.eof
 
-					%>  <li><a href="case.asp?a=<%=res("id")%>"  ><%=res("e_classname")%></a></li>
+					%>  
+					<li><a href="academy_list.asp?a=<%=res("id")%>"  ><%=res("e_classname")%></a></li>
 <%
 					  res.movenext
 					  loop
@@ -142,7 +143,7 @@
 					  %>
               <div></div>
             </ul></li>
-            <li><a href="partner.asp" class="ap<% if  mf="partner"  then response.Write"2"%>" >partner</a><ul>
+            <li><a href="partner.asp" class="ap" >partner</a><ul style="margin-left: 8px;" >
             
             
                           <%
@@ -166,7 +167,7 @@
 					  %>
              <div></div>
             </ul></li>
-            <li><a href="contact.asp" class="ap<% if  mf="contact"  then response.Write"2"%>" >Contact Us</a></li>
+            <li><a href="contact.asp" class="ap" >Contact Us</a></li>
         </div>
     </div>
     
