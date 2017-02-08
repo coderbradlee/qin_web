@@ -108,6 +108,24 @@
           <ul class="news_main">
            	  <div class="fl"><img src="../uploadfile/<% =res("tupian") %>"  /></div>
               <div class="fr"><% =res("e_content") %></div>
+  <%
+					set rs=server.createobject("adodb.recordset")
+					sql="select top 6 * from jd_case  where classid="&res("id")&" order by id desc"
+					rs.open sql,conn,1,1	
+					do while not rs.eof
+
+					%> 
+		<li><a href="news_show.asp?id=<% =rs("id") %>" ><% =got(rs("title"),36) %></a><span>[<% =FormatDate(rs("addtime"),4) %>]</span></li>
+				
+<%
+rs.movenext
+loop
+rs.close
+set rs=nothing
+%>
+	
+     
+     </ul></div>
           </ul>
           <div class="clearfix"></div>
   		</div>

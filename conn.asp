@@ -5,7 +5,7 @@
 'on error resume next
 dim provider,path,pass,dsn,conn
 provider="provider=microsoft.jet.oledb.4.0;"
-path="data source=" & server.mappath("jdshuju/#jiedai.mdb")
+path="data source=" & server.mappath("xx/#what.mdb")
 pass=";jet oledb:database password="
 dsn=provider&path&pass
 set conn=server.createobject("adodb.connection")
